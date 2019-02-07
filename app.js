@@ -13,7 +13,7 @@ var flash = require('connect-flash');
 var app = express();
 
 mongoose.connect('mongodb://localhost:27017/shopping', {useNewUrlParser: true } );
-
+require('./config/passport');
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout: 'layout', extname: '.hbs'}));
 app.set('view engine', '.hbs');
